@@ -1,0 +1,56 @@
+{
+  "name": "@hckrnews/object-converter",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/converter.js",
+  "files": [
+    "src/convert.js",
+    "src/converter.js",
+    "src/excel.js",
+    "src/get-sub-field.js",
+    "src/get-sub-items.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hckrnews/object-converter.git"
+  },
+  "author": {
+    "name": "Pieter Wigboldus",
+    "url": "https://hckr.news/"
+  },
+  "contributors": [
+    {
+      "name": "Pieter Wigboldus"
+    }
+  ],
+  "scripts": {
+    "lint": "standard src",
+    "lint:report": "standard src| standard-reporter --json > report.json",
+    "lint:fix": "standard src --fix",
+    "test": "jest",
+    "test:watch": "jest src --watch",
+    "cpd": "node_modules/jscpd/bin/jscpd src",
+    "vulnerabilities": "npm audit --production"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">= 16.14"
+  },
+  "license": "LGPL-3.0",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@jest/globals": "^28.0.2",
+    "babel-jest": "^28.0.2",
+    "jest": "^28.0.2",
+    "jest-junit": "^13.1.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "jscpd": "^3.4.5",
+    "standard": "^17.0.0",
+    "standard-reporter": "^1.0.5"
+  }
+}
