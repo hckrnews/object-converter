@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 17.x, 18.x]
+        node-version: [12.x, 14.x, 16.x, 17.x, 18.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -17,13 +17,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: npm install, lint, and test
       run: |
         npm ci
         npm run vulnerabilities
-        npm run lint
         npm run cpd
+        npm run lint
         npm test
       env:
-        NPM_TOKEN: ${{secrets.GITHUB_TOKEN}}
         CI: true

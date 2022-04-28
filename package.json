@@ -14,9 +14,6 @@
     "type": "git",
     "url": "https://github.com/hckrnews/object-converter.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "author": {
     "name": "Pieter Wigboldus",
     "url": "https://hckr.news/"
