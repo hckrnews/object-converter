@@ -89,4 +89,46 @@ describe('Get sub field test', () => {
 
     expect(result).toEqual(expected)
   })
+
+  it('It should work without a field', () => {
+    const data = [
+      {
+        id: 1,
+        quantities: [
+          {
+            quantity: 2
+          },
+          {
+            quantity: 3
+          }
+        ]
+      },
+      {
+        id: 4,
+        quantities: [
+          {
+            quantity: 5
+          }
+        ]
+      },
+      {
+        id: 6,
+        quantities: [
+          {
+            quantity: 7
+          },
+          {
+            quantity: 8
+          }
+        ]
+      },
+      {
+        id: 9
+      }
+    ]
+
+    const result = getSubField({ items: data })
+
+    expect(result).toEqual(data)
+  })
 })

@@ -94,4 +94,46 @@ describe('Get sub items test', () => {
 
     expect(result).toEqual(expected)
   })
+
+  it('It should work without a field', () => {
+    const data = [
+      {
+        id: 1,
+        battery: [
+          {
+            id: 2
+          },
+          {
+            id: 3
+          }
+        ]
+      },
+      {
+        id: 4,
+        battery: [
+          {
+            id: 5
+          }
+        ]
+      },
+      {
+        id: 6,
+        battery: [
+          {
+            id: 7
+          },
+          {
+            id: 8
+          }
+        ]
+      },
+      {
+        id: 9
+      }
+    ]
+
+    const result = getSubItems({ items: data })
+
+    expect(result).toEqual(data)
+  })
 })
