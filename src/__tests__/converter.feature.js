@@ -52,7 +52,7 @@ describe('Converter test', () => {
   it('It should convert the data to json', () => {
     const converter = makeConverter({ fields, outputType: 'string' })
     const output = converter({ data, type: 'json' })
-    const expected = JSON.stringify(data)
+    const expected = data
 
     expect(output.data).toEqual(expected)
     expect(output.type).toEqual('json')

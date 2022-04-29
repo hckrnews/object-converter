@@ -18,7 +18,7 @@ const converter = ({ fields, outputType = 'buffer' }) => {
     {
       type: 'json',
       extension: 'json',
-      parser: ({ data }) => JSON.stringify(data)
+      parser: ({ data }) => data
     }
   ]
 
